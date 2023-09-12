@@ -5,7 +5,7 @@ import {computed, ref} from "vue";
 
 const search = ref("")
 
-const sortedAlbums = albums.sort((b, a) => a.avg_rating - b.avg_rating)
+const sortedAlbums = albums.sort((b, a) => (a.avg_rating || 0) - (b.avg_rating || 0))
 
 const filteredAlbums = computed(() => {
   if(!search.value || search.value.length < 3) {

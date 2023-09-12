@@ -14,7 +14,7 @@ export type AlbumType = {
     path: string
 }
 
-export const albums : Album[]  = [
+export const albums : AlbumType[]  = [
     {
         "title": "Arthur (Or the Decline and Fall of the British Empire)",
         "artist": "The Kinks",

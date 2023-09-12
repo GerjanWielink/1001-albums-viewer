@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { Card } from "@/components/index";
-import { AlbumType } from "@/data/list"
+import type { AlbumType } from '@/data/list';
 
 const { album } = defineProps<{album: AlbumType}>()
 const { title, artist, summary, imgUrl, avg_rating, nr_of_votes, genres } = album;
