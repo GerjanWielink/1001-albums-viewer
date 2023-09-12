@@ -51,11 +51,17 @@ const { title, artist, summary, imgUrl, avg_rating, nr_of_votes, genres, path } 
 .album-card {
   display: grid;
   grid-gap: var(--padding-md);
-  grid-template-columns: var(--art-size) auto;
+  grid-template-columns: max-content auto;
 }
 .cover > img {
   width: var(--art-size);
   height: var(--art-size);
+  transition: all ease-in-out 0.2s;
+}
+
+.cover > img:hover {
+  width: calc(2 * var(--art-size));
+  height: calc(2 * var(--art-size));
 }
 
 hr {
