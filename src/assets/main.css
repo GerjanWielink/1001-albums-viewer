@@ -1,0 +1,40 @@
+@import './base.css';
+
+:root {
+    --padding-lg: 32px;
+    --padding-md: 16px;
+    --padding-sm: 8px;
+
+    --radius-md: 3px;
+    --box-shadow-under: 0px 0px 9px 3px rgba(41,41,41,.25);
+
+    --color-background: #f7f7f7;
+    --color-content-background: #fff;
+
+    --color-primary: black;
+    --color-secondary: gray;
+    --color-tertiary: #e2e2e2;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+
+    }
+}
+
+body {
+    background-color: var(--color-background)
+}
+
+b {
+    font-weight: bold;
+}
+
+p {
+    margin-bottom: var(--padding-sm);
+}
+
+hr {
+    border: 0.5px solid var(--color-tertiary);
+    margin-bottom: var(--padding-sm);
+}
