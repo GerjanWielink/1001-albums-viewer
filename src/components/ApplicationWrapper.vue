@@ -21,8 +21,5 @@
 
   main {
     padding: var(--padding-lg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 </style>

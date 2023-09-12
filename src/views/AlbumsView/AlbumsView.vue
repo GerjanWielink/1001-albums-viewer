@@ -37,8 +37,6 @@ const filteredAlbums = computed(() => {
   display: flex;
   flex-direction: column;
   gap: var(--padding-lg);
-  max-width: 1500px;
-  min-width: 900px;
 }
 
 .albums-list {

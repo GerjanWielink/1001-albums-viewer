@@ -3,7 +3,7 @@ import { Card } from "@/components/index";
 import type { AlbumType } from '@/data/list';
 
 const { album } = defineProps<{album: AlbumType}>()
-const { title, artist, summary, imgUrl, avg_rating, nr_of_votes, genres } = album;
+const { title, artist, summary, imgUrl, avg_rating, nr_of_votes, genres, path } = album;
 
 </script>
 
@@ -17,7 +17,7 @@ const { title, artist, summary, imgUrl, avg_rating, nr_of_votes, genres } = albu
         <div class="title">
           <b>{{ artist }}</b>
           <p>
-            {{ title }}
+            <a :href="`https://1001albumsgenerator.com${path}`">{{ title }}</a>
           </p>
           <p class="rating">
             {{ avg_rating }} out of {{ nr_of_votes }} votes
@@ -34,15 +34,20 @@ const { title, artist, summary, imgUrl, avg_rating, nr_of_votes, genres } = albu
 </template>
 
 <style scoped>
+* {
+  --art-size: 150px;
+}
+
+
 .album-card {
   display: grid;
   grid-gap: var(--padding-md);
-  grid-template-columns: 100px auto;
+  grid-template-columns: var(--art-size) auto;
 }
 
 .cover > img {
-  width: 100px;
-  height: 100px;
+  width: var(--art-size);
+  height: var(--art-size);
 }
 
 hr {
