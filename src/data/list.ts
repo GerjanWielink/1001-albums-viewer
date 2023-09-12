@@ -26,7 +26,7 @@ export const albums : AlbumType[]  = [
             "Pop"
         ],
         "avg_rating": 3.39,
-        "nr_of_votes": 8111,
+        "nr_of_votes": 8112,
         "spotify": "spotify:album:5p5sFNiicCu5Ofrw1vaSz7",
         "youtube": "https://www.youtube.com/results?search_query=Arthur%20(Or%20the%20Decline%20and%20Fall%20of%20the%20British%20Empire)%20-%20The%20Kinks",
         "apple_music": "https://music.apple.com/album/1361964692",
