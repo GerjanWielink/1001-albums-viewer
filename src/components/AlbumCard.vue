@@ -13,6 +13,7 @@ const { title, artist, summary, imgUrl, avg_rating, nr_of_votes, genres, path } 
       <img :src="imgUrl">
     </div>
     <div class="album-details">
+
       <div class="header">
         <div class="title">
           <b>{{ artist }}</b>
@@ -29,22 +30,29 @@ const { title, artist, summary, imgUrl, avg_rating, nr_of_votes, genres, path } 
           <span :key="genre" v-for="genre in genres">{{ genre }}</span>
         </div>
       </div>
+      <p class="summary">
+        {{ summary }}
+      </p>
     </div>
   </Card>
 </template>
 
 <style scoped>
 * {
-  --art-size: 150px;
+  --art-size: 200px;
 }
 
+
+.cover {
+  display: flex;
+  align-items: center;
+}
 
 .album-card {
   display: grid;
   grid-gap: var(--padding-md);
   grid-template-columns: var(--art-size) auto;
 }
-
 .cover > img {
   width: var(--art-size);
   height: var(--art-size);
@@ -63,7 +71,7 @@ hr {
 .genres > span {
   margin-right: var(--padding-sm);
   background-color: var(--color-tertiary);
-  color: var(--color-secondary);
+  color: var(--color-primary);
   padding: 0.2px 6px;
   border-radius: 3px;
   display: inline-grid;
@@ -76,4 +84,10 @@ p.rating {
   font-size: small;
 }
 
+p.summary {
+  color: var(--color-primary);
+  font-size: small;
+  overflow: auto;
+  height: 100px;
+}
 </style>

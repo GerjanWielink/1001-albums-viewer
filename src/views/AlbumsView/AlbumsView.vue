@@ -13,7 +13,7 @@ const filteredAlbums = computed(() => {
   }
 
   return sortedAlbums.filter(({ artist, title }) => (
-      artist.toLowerCase().includes(search.value) || title.toLowerCase().includes(search.value))
+      artist.toLowerCase().includes(search.value.toLowerCase()) || title.toLowerCase().includes(search.value.toLowerCase()))
   )
 })
 </script>
