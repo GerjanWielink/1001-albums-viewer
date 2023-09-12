@@ -7,7 +7,9 @@
     </header>
 
     <main>
-      <slot />
+      <div class="content">
+        <slot />
+      </div>
     </main>
   </div>
 </template>
@@ -21,5 +23,12 @@
 
   main {
     padding: var(--padding-lg);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .content {
+    max-width: 900px;
   }
 </style>
