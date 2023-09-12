@@ -23,13 +23,13 @@ const { title, artist, summary, imgUrl, avg_rating, nr_of_votes, genres, path } 
           <p class="rating">
             {{ avg_rating }} out of {{ nr_of_votes }} votes
           </p>
-          <hr>
         </div>
 
         <div class="genres">
           <span :key="genre" v-for="genre in genres">{{ genre }}</span>
         </div>
       </div>
+      <hr>
       <p class="summary">
         {{ summary }}
       </p>
@@ -53,6 +53,7 @@ const { title, artist, summary, imgUrl, avg_rating, nr_of_votes, genres, path } 
   grid-gap: var(--padding-md);
   grid-template-columns: max-content auto;
 }
+
 .cover > img {
   width: var(--art-size);
   height: var(--art-size);
@@ -72,6 +73,7 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: var(--padding-sm);
 }
 
 .genres > span {
@@ -95,5 +97,23 @@ p.summary {
   font-size: small;
   overflow: auto;
   height: 100px;
+}
+
+
+@media(max-width: 600px) {
+  .album-card {
+    grid-template-columns: unset;
+    grid-template-rows: max-content auto;
+  }
+
+  .cover > img:hover {
+    width: var(--art-size);
+    height: var(--art-size);
+  }
+
+  .album-details > .header {
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>
