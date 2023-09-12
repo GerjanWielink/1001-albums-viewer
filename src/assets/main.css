@@ -6,7 +6,7 @@
     --padding-sm: 8px;
 
     --radius-md: 3px;
-    --box-shadow-under: 0px 0px 9px 3px rgba(41,41,41,.25);
+    --box-shadow-under: 0 4px 10px rgba(0,0,0,.25);
 
     --color-background: #f7f7f7;
     --color-content-background: #fff;
@@ -51,5 +51,11 @@ a:hover {
 input {
     padding: var(--padding-md);
     border-radius: var(--radius-md);
+    border: none;
+    box-shadow: var(--box-shadow-under);
     font-size: large;
+}
+
+input:focus {
+    outline-width: 0;
 }
