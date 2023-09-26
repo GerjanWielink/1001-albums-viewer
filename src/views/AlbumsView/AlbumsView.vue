@@ -12,9 +12,7 @@ const filteredAlbums = computed(() => {
     return sortedAlbums.slice(0, 25)
   }
 
-  return sortedAlbums.filter(({ artist, title }) => (
-      artist.toLowerCase().includes(search.value.toLowerCase()) || title.toLowerCase().includes(search.value.toLowerCase()))
-  )
+  return sortedAlbums.filter(({ artist, title, genres }) => `${genres.join(", ")}, ${artist}, ${title}`.toLowerCase().includes(search.value.toLowerCase()))
 })
 </script>
 
